@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0c2c20"><title>Quản trị nội dung | Green Campus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{font-family:'Be Vietnam Pro',sans-serif;color:#173526;background:#f4f7f1}*{box-sizing:border-box}body{margin:0}.top{background:#0b2b20;color:white;padding:22px max(5vw,20px);display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800;letter-spacing:.08em}.top a{color:#d9efce;text-decoration:none;font-size:13px}.wrap{width:min(1100px,92vw);margin:42px auto}.panel{background:white;border:1px solid #dce7d8;border-radius:18px;padding:26px;box-shadow:0 15px 45px #183e2409;margin-bottom:22px}.muted{color:#68796d;font-size:13px;line-height:1.7}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}label{display:grid;gap:7px;font-size:13px;font-weight:700;margin:14px 0}input,textarea,select{font:inherit;border:1px solid #d5e1d2;border-radius:9px;padding:12px;background:#fbfdf9;width:100%}button{font:inherit;border:0;border-radius:9px;padding:11px 16px;background:#276d3d;color:white;font-weight:700;cursor:pointer}button.secondary{background:#eaf2e6;color:#285a36}button.danger{background:#fff0eb;color:#9a3d27}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.hidden{display:none!important}.item{border:1px solid #e0e9dc;border-radius:12px;padding:16px;margin:12px 0}.item h3{margin:0 0 8px;font-size:16px}.item p{font-size:13px;line-height:1.7;color:#627166}.tag{font-size:11px;background:#fff4d9;color:#876526;padding:5px 8px;border-radius:99px}.status{margin:12px 0;color:#316a3e;font-size:13px}.status.error{color:#a43c2b}@media(max-width:700px){.grid{grid-template-columns:1fr}.panel{padding:19px}.wrap{margin:24px auto}}
+  </style>
+</head>
+<body>
+<header class="top"><div class="brand">GREEN CAMPUS / QUẢN TRỊ</div><a href="/">← Về trang chủ</a></header>
+<main class="wrap">
+  <section class="panel" id="setup"><h1>Thiết lập kết nối</h1><p class="muted">Trang quản trị dùng Supabase Auth và Row Level Security. Điền URL dự án và khóa anon công khai trong <code>public-config.js</code>; không dùng khóa service role tại trình duyệt.</p><p id="setup-message" class="status"></p></section>
+  <section class="panel" id="login-panel"><h1>Đăng nhập quản trị</h1><p class="muted">Chỉ tài khoản đã được cấp vai trò biên tập viên hoặc quản trị viên mới có quyền duyệt nội dung.</p><form id="login-form"><label>Email<input id="email" type="email" required autocomplete="username"></label><label>Mật khẩu<input id="password" type="password" required autocomplete="current-password"></label><button type="submit">Đăng nhập</button></form><p id="login-message" class="status" aria-live="polite"></p></section>
+  <section class="panel hidden" id="dashboard"><div class="row" style="justify-content:space-between"><div><h1>Hàng chờ nội dung</h1><p class="muted">Nội dung thu thập tự động luôn ở trạng thái chờ duyệt. Kiểm tra tiêu đề, trích đoạn và nguồn trước khi công khai.</p></div><button class="secondary" id="logout">Đăng xuất</button></div><div class="grid"><div class="item"><b>Thống kê 30 ngày</b><p id="admin-stats" class="muted">Đang tải…</p></div><div class="item"><b>Phản hồi gần đây</b><div id="admin-feedback" class="muted">Đang tải…</div></div></div><div id="queue"></div><p id="dashboard-message" class="status" aria-live="polite"></p></section>
+  <section class="panel hidden" id="eco-admin-panel">
+    <h2>Eco Challenge · Quản trị nhiệm vụ ảnh & điểm tài khoản</h2>
+    <p class="muted">Chỉ tài khoản có vai trò quản trị viên mới được đăng nhiệm vụ và điều chỉnh điểm. Mọi lần cộng/trừ điểm được lưu vào sổ lịch sử.</p>
+    <div class="grid">
+      <div class="item"><h3>Đăng nhiệm vụ ảnh hằng ngày</h3>
+        <form id="eco-task-form">
+          <label>Tên nhiệm vụ<input id="eco-task-title" maxlength="140" required placeholder="Ví dụ: Một ngày không nhựa dùng một lần"></label>
+          <label>Mô tả / yêu cầu<textarea id="eco-task-description" rows="4" maxlength="2000" required placeholder="Mô tả nhiệm vụ, cách thực hiện và minh chứng cần có..."></textarea></label>
+          <label>Ngày hiển thị<input id="eco-task-date" type="date" required></label>
+          <label>Hạn hoàn thành (không bắt buộc)<input id="eco-task-expiry" type="datetime-local"></label>
+          <label>Ảnh nhiệm vụ (JPG/PNG/WEBP, tối đa 5 MB)<input id="eco-task-image" type="file" accept="image/jpeg,image/png,image/webp" required></label>
+          <button type="submit">Đăng nhiệm vụ cho tất cả người chơi</button>
+        </form><p id="eco-task-message" class="status" aria-live="polite"></p>
+      </div>
+      <div class="item"><h3>Cộng / trừ điểm tài khoản</h3>
+        <form id="eco-points-form">
+          <label>Chọn tài khoản<select id="eco-points-user" required><option value="">Đang tải tài khoản…</option></select></label>
+          <label>Số điểm thay đổi<input id="eco-points-delta" type="number" min="-100000" max="100000" step="1" required placeholder="Ví dụ: 20 hoặc -5"></label>
+          <label>Lý do điều chỉnh<textarea id="eco-points-reason" rows="3" maxlength="300" required placeholder="Nêu rõ lý do cộng hoặc trừ điểm..."></textarea></label>
+          <button type="submit">Xác nhận điều chỉnh điểm</button>
+        </form><p id="eco-points-message" class="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <h3>Lịch sử điều chỉnh điểm</h3><div id="eco-points-history" class="muted">Đang tải…</div>
+    <h3>Nhiệm vụ đã đăng</h3><div id="eco-task-list" class="muted">Đang tải…</div>
+  </section>
+  <section class="panel hidden" id="manual-panel"><h2>Thêm nội dung thủ công</h2><form id="manual-form" class="grid"><label>Tiêu đề<input id="new-title" maxlength="180" required></label><label>Chuyên mục<select id="new-category"><option value="news">Tin tức & kiến thức</option><option value="reuse">Tái sử dụng</option><option value="product">Sản phẩm tái chế</option><option value="waste">Danh mục rác</option></select></label><label style="grid-column:1/-1">Mô tả<textarea id="new-excerpt" rows="3" maxlength="1200" required></textarea></label><label style="grid-column:1/-1">Đường dẫn nguồn (nếu có)<input id="new-source" type="url" placeholder="https://..."></label><div><button type="submit">Lưu bản nháp</button></div></form></section>
+  <section class="panel hidden" id="import-panel"><h2>Nhập nội dung hàng loạt</h2><p class="muted">Hỗ trợ CSV hoặc JSON. Mỗi dòng được lưu thành bản nháp để biên tập viên kiểm tra trước khi công khai. Tối đa 100 bản ghi/lần.</p><label>Chọn tệp CSV/JSON<input id="bulk-file" type="file" accept=".csv,.json,text/csv,application/json"></label><button id="bulk-import" type="button" class="secondary">Nhập thành bản nháp</button><p id="bulk-message" class="status" aria-live="polite"></p><p class="muted">CSV cần các cột: title,excerpt,category,source_url,icon. Category: news, reuse, product hoặc waste.</p></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="public-config.js"></script><script src="admin.js"></script>
+</body></html>

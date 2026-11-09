@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#09251d" />
+  <meta name="description" content="Green Campus – nền tảng tra cứu, phân loại và tái sử dụng rác thải trong môi trường Học viện." />
+  <title>Green Campus | Sống xanh từ những hành động nhỏ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="eco-challenge.css" />
+  <link rel="stylesheet" href="kb.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Green Campus - Trang chủ">
+      <span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M31.8 7.5C18.5 7.3 8.2 12.8 8.2 23.1c0 5.4 3.8 9 8.8 9 10.8 0 15.4-12.1 14.8-24.6Z"/><path d="M9 33c4.8-8.5 10.8-13.2 19.3-18.2"/></svg></span>
+      <span><b>GREEN</b><small>CAMPUS</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Điều hướng chính">
+      <a href="#home" data-nav="home">Trang chủ</a><a href="#lookup" data-nav="lookup">Tra cứu</a><a href="#ai" data-nav="ai">Tra cứu bằng ảnh</a><a href="#reuse" data-nav="reuse">Tái sử dụng</a><a href="#market" data-nav="market">Gian hàng xanh</a><a href="#eco" data-nav="eco">Eco Challenge</a>
+    </nav>
+    <div class="header-actions"><button class="icon-btn" id="open-search" aria-label="Mở tìm kiếm">⌕</button><a class="button button-small button-light" href="#admin">Quản trị <span>↗</span></a><button class="menu-toggle" id="menu-toggle" aria-label="Mở menu">☰</button></div>
+  </header>
+  <main id="app" tabindex="-1">
+    <section class="hero" id="home">
+      <canvas id="hero-canvas" aria-label="Đồ họa quả địa cầu xanh chuyển động"></canvas>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="pulse-dot"></span> HỆ SINH THÁI SỐ VÌ MÔI TRƯỜNG XANH</div>
+        <h1>Một hành động nhỏ.<br/><em>Một tương lai xanh.</em></h1>
+        <p>Tra cứu, phân loại và tái sử dụng rác thải thông minh. Bắt đầu thay đổi môi trường học đường từ chính lựa chọn mỗi ngày.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#lookup">Khám phá nền tảng <span>↗</span></a><a class="text-link" href="#about">Tìm hiểu dự án <span>↓</span></a></div>
+        <div class="hero-note"><span class="mini-leaf">✳</span> GREEN CAMPUS · HỌC VIỆN HÀNH CHÍNH VÀ QUẢN TRỊ CÔNG</div>
+      </div>
+      <div class="hero-side-label">SUSTAINABILITY / 01—06</div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>10°46' N · 106°40' E</span></div>
+      <div class="hero-orbit-label">THINK GREEN<br/>ACT RESPONSIBLY</div>
+    </section>
+
+    <section class="ticker" aria-label="Thông điệp môi trường"><div class="ticker-track"><span>PHÂN LOẠI ĐÚNG</span> ✳ <span>TÁI SỬ DỤNG THÔNG MINH</span> ✳ <span>GIẢM THIỂU RÁC THẢI</span> ✳ <span>LAN TỎA LỐI SỐNG XANH</span> ✳ <span>PHÂN LOẠI ĐÚNG</span> ✳ <span>TÁI SỬ DỤNG THÔNG MINH</span> ✳ <span>GIẢM THIỂU RÁC THẢI</span> ✳</div></section>
+
+    <section class="section intro-section" id="about">
+      <div class="section-kicker">01 / VỀ GREEN CAMPUS</div><div class="intro-layout"><h2>Công nghệ kết nối<br/><em>trách nhiệm xanh.</em></h2><div class="intro-copy"><p>Green Campus là nền tảng hỗ trợ cộng đồng Học viện nhận biết, phân loại và tái sử dụng rác thải. Dữ liệu tra cứu được tổ chức tập trung; công cụ số giúp việc xử lý rác trở nên trực quan, thuận tiện và có trách nhiệm hơn.</p><a class="under-link" href="#guides">Khám phá cách hoạt động <span>↗</span></a></div></div>
+      <div class="stat-grid"><article class="stat-card"><span class="stat-icon">♻</span><strong>04</strong><small>NHÓM PHÂN LOẠI CƠ BẢN</small></article><article class="stat-card"><span class="stat-icon">⌕</span><strong>60+</strong><small>NỘI DUNG KHỞI TẠO</small></article><article class="stat-card"><span class="stat-icon">◎</span><strong>24/7</strong><small>TRA CỨU TRỰC TUYẾN</small></article><article class="stat-card"><span class="stat-icon">↗</span><strong>01</strong><small>CỘNG ĐỒNG CÙNG HÀNH ĐỘNG</small></article></div>
+      <p class="data-disclaimer">Số lượng nội dung là dữ liệu mẫu khởi tạo của phiên bản thử nghiệm, không phải số liệu hoạt động thực tế của Học viện.</p>
+    </section>
+
+    <section class="section dark-section feature-section" id="features"><div class="section-kicker light-kicker">02 / KHÁM PHÁ NỀN TẢNG</div><div class="section-heading"><h2>Mọi hành động xanh<br/><em>bắt đầu từ đây.</em></h2><p>Một điểm đến cho kiến thức, công cụ và những sáng kiến tuần hoàn.</p></div>
+      <div class="feature-grid">
+        <a class="feature-card feature-large" href="#lookup"><div class="feature-art art-search"><div class="glass-orb"></div><span class="floating-tag">SEARCH / 01</span><span class="art-symbol">⌕</span></div><div class="feature-meta"><span>01 — TRA CỨU THÔNG MINH</span><b>Tra cứu rác thải <i>↗</i></b><p>Tìm nhanh vật dụng, nhóm phân loại và hướng dẫn xử lý.</p></div></a>
+        <a class="feature-card" href="#ai"><div class="feature-art art-ai"><div class="scan-frame"></div><span class="art-symbol">◉</span><span class="floating-tag">VISION / 02</span></div><div class="feature-meta"><span>02 — CÔNG NGHỆ HÌNH ẢNH</span><b>Nhận diện rác <i>↗</i></b><p>Tải ảnh để nhận gợi ý phân loại sơ bộ.</p></div></a>
+        <a class="feature-card" href="#guides"><div class="feature-art art-guide"><div class="bin-shape"></div><span class="art-symbol">♻</span><span class="floating-tag">GUIDE / 03</span></div><div class="feature-meta"><span>03 — HÀNH ĐỘNG ĐÚNG</span><b>Hướng dẫn phân loại <i>↗</i></b><p>Hiểu đúng các nhóm rác và cách bỏ rác an toàn.</p></div></a>
+        <a class="feature-card" href="#reuse"><div class="feature-art art-reuse"><div class="leaf-shape">✳</div><span class="floating-tag">RE:USE / 04</span></div><div class="feature-meta"><span>04 — VÒNG ĐỜI MỚI</span><b>Góc tái sử dụng <i>↗</i></b><p>Biến vật liệu cũ thành ý tưởng hữu ích.</p></div></a>
+        <a class="feature-card" href="#market"><div class="feature-art art-market"><div class="market-cube"></div><span class="floating-tag">MARKET / 05</span></div><div class="feature-meta"><span>05 — SÁNG KIẾN CỘNG ĐỒNG</span><b>Gian hàng xanh <i>↗</i></b><p>Khám phá sản phẩm và dự án tái chế.</p></div></a>
+        <a class="feature-card" href="#news"><div class="feature-art art-news"><div class="news-rings"></div><span class="art-symbol">✺</span><span class="floating-tag">INSIGHT / 06</span></div><div class="feature-meta"><span>06 — TRI THỨC MỞ</span><b>Tin tức & kiến thức <i>↗</i></b><p>Cập nhật góc nhìn và thông tin môi trường.</p></div></a>
+      </div>
+    </section>
+
+    <section class="section search-section" id="lookup"><div class="section-kicker">03 / TRA CỨU DỮ LIỆU</div><div class="section-heading"><h2>Không chắc bỏ đâu?<br/><em>Tra cứu ngay.</em></h2><p>Tìm theo tên vật dụng hoặc chọn nhóm rác để xem cách xử lý phù hợp.</p></div>
+      <div class="search-panel"><div class="search-box"><span>⌕</span><input id="waste-search" type="search" placeholder="Ví dụ: chai nhựa, pin, giấy carton..." aria-label="Tìm loại rác"/><button id="clear-search" aria-label="Xóa tìm kiếm">×</button></div><div class="filter-row" id="waste-filters"><button class="filter-chip active" data-filter="all">Tất cả</button><button class="filter-chip" data-filter="recycle">♻ Tái chế</button><button class="filter-chip" data-filter="organic">❋ Hữu cơ</button><button class="filter-chip" data-filter="other">＋ Còn lại</button><button class="filter-chip" data-filter="hazard">⚠ Nguy hại</button></div></div>
+      <div class="result-heading"><span id="waste-count">10 kết quả gợi ý</span><a href="#guides">Xem hướng dẫn phân loại ↗</a></div><div class="item-grid" id="waste-results"></div>
+    </section>
+
+    <section class="section ai-section" id="ai"><div class="section-kicker light-kicker">04 / TRA CỨU BẰNG HÌNH ẢNH</div><div class="ai-layout"><div><h2>Một bức ảnh.<br/><em>Một gợi ý xanh.</em></h2><p>Tải ảnh để xem trước, sau đó gõ tên vật dụng để xem hướng dẫn phân loại trong cơ sở dữ liệu của trang, hoặc mở Google Lens để nhận diện. Không cần tài khoản hay khóa API.</p><div class="ai-points"><span>✓ Hỗ trợ JPG, PNG, WEBP</span><span>✓ Xem trước ảnh trước khi gửi</span><span>✓ Có cảnh báo với rác nguy hại</span></div></div><div class="upload-card"><input type="file" id="image-input" accept="image/png,image/jpeg,image/webp" hidden/><div class="upload-drop" id="upload-drop"><div class="upload-icon">↑</div><b>Kéo thả hình ảnh vào đây</b><span>hoặc nhấn để chọn từ thiết bị</span><small>Định dạng JPG, PNG, WEBP · tối đa 8 MB</small><button class="button button-primary" id="choose-image">Chọn hình ảnh</button></div><div class="image-preview" id="image-preview" hidden><img id="preview-img" alt="Ảnh vật dụng được tải lên"/><div class="preview-actions"><button class="button button-outline" id="change-image">Đổi ảnh</button><button class="button button-primary" id="analyze-image">Tra cứu theo ảnh ↗</button></div></div><div class="analysis-result" id="analysis-result" hidden></div></div></div><p class="data-disclaimer">Kết quả chỉ mang tính tham khảo. Không dùng kết quả để xử lý pin, bóng đèn, hóa chất, rác điện tử hoặc vật liệu không rõ nguồn gốc khi chưa được xác minh.</p></div></section>
+
+    <section class="section guide-section" id="guides"><div class="section-kicker">05 / HƯỚNG DẪN PHÂN LOẠI</div><div class="section-heading"><h2>Phân loại đúng,<br/><em>tác động tích cực.</em></h2><p>Tham khảo bốn nhóm hướng dẫn cơ bản. Quy định thực tế cần được đối chiếu với hướng dẫn của đơn vị quản lý và thu gom tại Học viện.</p></div><div class="guide-grid" id="guide-cards"></div><div class="center-action"><a class="button button-dark" href="#lookup">Tra cứu từng loại rác <span>↗</span></a></div></section>
+
+    <section class="section reuse-section" id="reuse"><div class="section-kicker">06 / GÓC TÁI SỬ DỤNG XANH</div><div class="section-heading"><h2>Đừng vội bỏ đi.<br/><em>Hãy thử sáng tạo.</em></h2><p>Những ý tưởng nhỏ giúp kéo dài vòng đời vật liệu và khơi gợi tinh thần sáng tạo.</p></div><div class="content-grid" id="reuse-grid"></div><div class="center-action"><a class="under-link" href="#reuse-list">Khám phá toàn bộ ý tưởng <span>↗</span></a></div></section>
+
+    <section class="section market-section" id="market"><div class="section-kicker">07 / GIAN HÀNG TÁI CHẾ</div><div class="market-heading"><div><h2>Sáng kiến xanh<br/><em>tạo giá trị mới.</em></h2><p>Không gian giới thiệu sản phẩm tái chế và ý tưởng kinh tế tuần hoàn.</p></div><span class="market-stamp">RETHINK<br/>REUSE<br/>REPEAT</span></div><div class="product-grid" id="product-grid"></div><p class="data-disclaimer">Sản phẩm đang hiển thị là ý tưởng minh họa, không phải hàng hóa đang được bán hoặc đã được xác minh bởi Học viện.</p></section>
+
+    <section class="section eco-section" id="eco"><div class="section-kicker">ECO CHALLENGE · 7-DAY GREEN RACE</div><h2>Một mùa thi đua<br/><em>hành trình sống xanh.</em></h2><p class="eco-lead">Hai cách tích điểm, một bảng xếp hạng: nhiệm vụ trực tuyến tự sinh ngẫu nhiên (đổi mỗi 2 giờ, mỗi ngày) và hoạt động thực tiễn không giới hạn lượt gửi, do Ban quản trị xem minh chứng và quyết định điểm.</p><div id="eco-app"></div></section>
+    <section class="section news-section" id="news"><div class="section-kicker">08 / TRI THỨC & CẬP NHẬT</div><div class="section-heading"><h2>Hiểu để hành động.<br/><em>Đọc để thay đổi.</em></h2><p>Tra cứu kiến thức môi trường và khám phá nguồn thông tin trực tuyến.</p></div><div class="live-search"><div class="live-search-title"><span class="live-dot"></span><div><b>Tìm kiếm thông tin trực tuyến</b><small>Kết nối Wikipedia mở · kết quả có liên kết nguồn</small></div></div><form id="web-search-form" class="live-search-form"><input id="web-search-input" type="search" placeholder="Tìm chủ đề môi trường..."/><button class="button button-primary" type="submit">Tìm trên Internet ↗</button></form><div id="web-search-results" class="web-results" aria-live="polite"></div></div><div class="content-grid news-grid" id="news-grid"></div></section>
+
+    <section class="section assistant-section" id="assistant"><div class="section-kicker">08B / HỎI ĐÁP TRA CỨU</div><div class="section-heading"><h2>Chưa tìm thấy câu trả lời?<br/><em>Hãy đặt câu hỏi.</em></h2><p>Hệ thống tra cứu trong cơ sở dữ liệu của trang và mở Google khi cần. Câu trả lời chỉ mang tính tham khảo, không thay thế quy định của Học viện hoặc đơn vị thu gom.</p></div><form id="assistant-form" class="assistant-form"><label for="assistant-question">Câu hỏi của bạn</label><textarea id="assistant-question" rows="3" maxlength="1200" placeholder="Ví dụ: Ly giấy có lớp phủ nhựa nên xử lý thế nào?" required></textarea><button class="button button-primary" type="submit" id="assistant-submit">Tra cứu ↗</button></form><div id="assistant-answer" class="assistant-answer" aria-live="polite"></div></section>
+
+    <section class="section location-section" id="collection"><div class="section-kicker">09 / ĐIỂM THU GOM</div><div class="location-layout"><div><h2>Trao vật liệu<br/><em>đúng nơi tiếp nhận.</em></h2><p>Danh sách điểm thu gom sẽ được cập nhật sau khi khảo sát và xác minh địa chỉ, loại vật liệu tiếp nhận, thời gian hoạt động và thông tin liên hệ.</p><span class="status-pill">● ĐANG CHỜ XÁC MINH ĐỊA ĐIỂM</span></div><div class="location-placeholder"><div class="map-grid"></div><div class="map-pin">⌖</div><b>Dữ liệu điểm thu gom</b><span>Chưa có địa điểm được xác minh</span></div></div></section>
+
+    <section class="section feedback-section" id="feedback"><div class="section-kicker">09 / PHẢN HỒI & ĐÁNH GIÁ</div><div class="feedback-layout"><div><h2>Cùng hoàn thiện<br/><em>khuôn viên xanh.</em></h2><p>Gửi góp ý về dữ liệu phân loại, trải nghiệm sử dụng hoặc hoạt động tái sử dụng. Thống kê tổng hợp giúp nhóm dự án đánh giá hiệu quả.</p><div class="live-stats" id="live-stats"><div><strong id="stat-visits">—</strong><span>Lượt truy cập ghi nhận</span></div><div><strong id="stat-searches">—</strong><span>Lượt tra cứu</span></div><div><strong id="stat-reuse">—</strong><span>Lượt tự báo cáo tái sử dụng</span></div></div></div><form id="reuse-report-form" class="feedback-form reuse-report-form"><b>Ghi nhận một hoạt động tái sử dụng</b><label for="reuse-report-type">Bạn đã thực hiện hoạt động nào?</label><select id="reuse-report-type"><option value="reuse_general">Tái sử dụng vật dụng</option><option value="reuse_paper">Tái sử dụng giấy/carton</option><option value="reuse_plastic">Tái sử dụng chai/lọ nhựa</option><option value="reuse_other">Hoạt động khác</option></select><button class="button button-dark" type="submit">Ghi nhận hoạt động ↗</button><p id="reuse-report-status" class="form-message" aria-live="polite"></p></form><form id="feedback-form" class="feedback-form"><label for="feedback-kind">Loại phản hồi</label><select id="feedback-kind"><option value="general">Góp ý chung</option><option value="data">Thông tin phân loại</option><option value="reuse">Hoạt động tái sử dụng</option><option value="bug">Báo lỗi website</option></select><label for="feedback-message">Nội dung góp ý</label><textarea id="feedback-message" rows="4" minlength="3" maxlength="2000" required placeholder="Chia sẻ ý kiến của bạn..."></textarea><label class="honeypot" aria-hidden="true">Không điền trường này<input id="feedback-website" tabindex="-1" autocomplete="off"></label><button class="button button-primary" type="submit">Gửi phản hồi ↗</button><p id="feedback-status" class="form-message" aria-live="polite"></p></form></div></section>
+
+    <section class="section admin-section" id="admin"><div class="section-kicker">10 / QUẢN TRỊ NỘI DUNG</div><div class="admin-layout"><div><h2>Quản lý nội dung<br/><em>một cách chủ động.</em></h2><p>Quản trị viên đăng nhập tại trang riêng để duyệt nội dung tự động thu thập, đăng nội dung đã xác minh và theo dõi phản hồi. Cần cấu hình Supabase trước khi sử dụng.</p></div><div class="admin-card"><p><a class="button button-outline" href="admin.html">Mở trang quản trị trực tuyến ↗</a></p><div class="admin-card-head"><b>Thêm nội dung thử nghiệm</b><span class="status-pill">BẢN NHÁP CỤC BỘ</span></div><form id="admin-form"><label>Tiêu đề<input id="admin-title" required maxlength="100" placeholder="Nhập tiêu đề nội dung"/></label><label>Chuyên mục<select id="admin-category"><option value="reuse">Góc tái sử dụng</option><option value="news">Tin tức & kiến thức</option><option value="waste">Danh mục rác thải</option></select></label><label>Mô tả<textarea id="admin-description" required maxlength="400" rows="3" placeholder="Mô tả ngắn gọn..."></textarea></label><button class="button button-primary" type="submit">Lưu bản nháp trên thiết bị ↗</button><p id="admin-message" class="form-message" aria-live="polite"></p></form></div></div></section>
+
+    <section class="closing-cta"><div class="cta-glow"></div><span class="section-kicker light-kicker">GREEN CAMPUS / OUR SHARED FUTURE</span><h2>Trái đất không cần<br/>những lời hứa lớn.<br/><em>Chỉ cần hành động hôm nay.</em></h2><a class="button button-primary" href="#lookup">Bắt đầu sống xanh <span>↗</span></a></section>
+  </main>
+  <footer class="site-footer"><div class="footer-top"><a class="brand brand-footer" href="#home"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M31.8 7.5C18.5 7.3 8.2 12.8 8.2 23.1c0 5.4 3.8 9 8.8 9 10.8 0 15.4-12.1 14.8-24.6Z"/><path d="M9 33c4.8-8.5 10.8-13.2 19.3-18.2"/></svg></span><span><b>GREEN</b><small>CAMPUS</small></span></a><p>Một nền tảng số thúc đẩy phân loại, tái sử dụng và trách nhiệm môi trường trong cộng đồng học đường.</p><div class="footer-links"><a href="#about">Về dự án</a><a href="#lookup">Tra cứu</a><a href="#ai">Tra cứu bằng ảnh</a><a href="#admin">Quản trị</a></div></div><div class="footer-bottom"><span>© 2026 GREEN CAMPUS · BẢN THỬ NGHIỆM</span><span>THIẾT KẾ VÌ MỘT TƯƠNG LAI BỀN VỮNG ✳</span></div></footer>
+  <div class="search-modal" id="search-modal" aria-hidden="true"><div class="search-modal-panel"><button class="modal-close" id="close-search" aria-label="Đóng">×</button><span class="section-kicker">TÌM KIẾM GREEN CAMPUS</span><h3>Bạn đang tìm điều gì?</h3><div class="search-box"><span>⌕</span><input id="global-search" type="search" placeholder="Nhập tên rác, ý tưởng, kiến thức..."/><button id="run-global-search">↗</button></div><p>Gợi ý: chai nhựa · pin · giấy carton · tái chế</p></div></div>
+  <section class="detail-modal" id="detail-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="detail-title"><div class="detail-panel"><button class="modal-close" id="detail-close" aria-label="Đóng">×</button><span class="section-kicker">GREEN CAMPUS / THÔNG TIN CHI TIẾT</span><h2 id="detail-title"></h2><p id="detail-description"></p><a class="button button-dark" id="detail-related" href="#lookup">Tra cứu liên quan ↗</a></div></section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="public-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+  <script src="site-services.js"></script>
+  <script src="google-fallback.js"></script>
+  <script src="kb.js"></script>
+  <script src="eco-challenge.js"></script>
+  <script src="eco-cloud.js"></script>
+  <script src="hero-3d.js"></script>
+</body>
+</html>
